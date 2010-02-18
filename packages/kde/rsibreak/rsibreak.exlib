@@ -1,0 +1,22 @@
+# Copyright 2010 Yury G. Kudryashov
+# Distributed under the terms of the GNU General Public License v2
+
+require cmake kde
+
+SUMMARY="RSIBreak helps you to prevent Repetitive Strain Injury (RSI)"
+
+DESCRIPTION="
+Repetitive Strain Injury (RSI) is an illness which can occur as a result of continuous work
+with a mouse and keyboard. The risk of suffering injury increases the longer users work without
+breaks. RSIBreak simply offers reminders to take a break now and then.
+"
+
+HOMEPAGE="http://www.${PN}.org"
+DOWNLOADS="${HOMEPAGE}/files/${PNV}.tar.bz2"
+
+DEPENDENCIES="
+    build+run:
+        x11-libs/qt:4
+        kde/kdelibs:4[>=4.3]
+"
+

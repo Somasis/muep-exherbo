@@ -1,0 +1,8 @@
+# Copyright 2010 Yury G. Kudryashov
+# Distributed under the terms of the GNU General Public License v2
+
+require rsibreak
+
+PLATFORMS="~amd64 ~x86"
+SLOT="0"
+
