@@ -13,6 +13,7 @@ breaks. RSIBreak simply offers reminders to take a break now and then.
 
 HOMEPAGE="http://www.${PN}.org"
 DOWNLOADS="${HOMEPAGE}/files/${PNV}.tar.bz2"
+LICENCES="GPL-2"
 
 DEPENDENCIES="
     build+run:
