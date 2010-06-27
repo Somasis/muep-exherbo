@@ -1,0 +1,23 @@
+
+
+require cmake
+
+SUMMARY="Two-dimensional rigid body physics engine"
+HOMEPAGE="http://code.google.com/p/chipmunk-physics/"
+DOWNLOADS="http://files.slembcke.net/chipmunk/release/Chipmunk-5.x/${PNV}.tgz"
+LICENCES="TODO"
+SLOT="0"
+
+DEPENDENCIES="
+    build+run:
+        x11-dri/freeglut
+        x11-dri/mesa
+"
+
+CMAKE_SRC_CONFIGURE_PARAMS=(
+    -DBUILD_DEMOS=ON
+    -DINSTALL_DEMOS=ON
+
+)
+
+

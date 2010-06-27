@@ -1,0 +1,6 @@
+
+
+require Chipmunk
+
+PLATFORMS="~amd64 ~x86"
+
