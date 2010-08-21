@@ -1,0 +1,18 @@
+
+
+require cmake
+
+SUMMARY="Two-dimensional space ship battle game"
+HOMEPAGE="about:blank"
+LICENCES="GPL"
+SLOT="0"
+
+DEPENDENCIES="
+    build+run:
+        dev-libs/Chipmunk[>=5.0.0]
+        media-libs/SDL
+        x11-dri/mesa
+"
+
+
+
