@@ -1,4 +1,5 @@
-
+# Copyright 2010 Joonas Sarajärvi <muepsj@gmail.com>
+# Distributed under the terms of GNU General Public License v2
 
 require cmake
 
@@ -8,16 +9,21 @@ DOWNLOADS="http://files.slembcke.net/chipmunk/release/Chipmunk-5.x/${PNV}.tgz"
 LICENCES="TODO"
 SLOT="0"
 
-DEPENDENCIES="
-    build+run:
-        x11-dri/freeglut
-        x11-dri/mesa
+MYOPTIONS="
+    demos [[ description = [ build the chipmunk_demos program ] ]]
 "
 
-CMAKE_SRC_CONFIGURE_PARAMS=(
-    -DBUILD_DEMOS=ON
-    -DINSTALL_DEMOS=ON
 
+DEPENDENCIES="
+    build+run:
+        demos? (
+            x11-dri/freeglut
+            x11-dri/mesa
+        )
+"
+
+CMAKE_SRC_CONFIGURE_OPTIONS=(
+    'demos BUILD_DEMOS'
+    'demos INSTALL_DEMOS'
 )
-
 
