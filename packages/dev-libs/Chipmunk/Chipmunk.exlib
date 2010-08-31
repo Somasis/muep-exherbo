@@ -6,7 +6,7 @@ require cmake
 SUMMARY="Two-dimensional rigid body physics engine"
 HOMEPAGE="http://code.google.com/p/chipmunk-physics/"
 DOWNLOADS="http://files.slembcke.net/chipmunk/release/Chipmunk-5.x/${PNV}.tgz"
-LICENCES="TODO"
+LICENCES="MIT"
 SLOT="0"
 
 MYOPTIONS="
