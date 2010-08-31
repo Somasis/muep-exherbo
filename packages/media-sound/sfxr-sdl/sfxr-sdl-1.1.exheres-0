@@ -1,0 +1,17 @@
+# Copyright 2010 Joonas Sarajärvi <muepsj@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="A handy utility for generating simple sound effects"
+HOMEPAGE="http://www.drpetter.se/project_sfxr.html"
+DOWNLOADS="http://www.drpetter.se/files/${PNV}.tar.gz"
+
+SLOT="0"
+
+DEPENDENCIES="
+    build+run:
+        media-libs/SDL
+        x11-libs/gtk+:2
+"
+
+PLATFORMS="~x86"
+
