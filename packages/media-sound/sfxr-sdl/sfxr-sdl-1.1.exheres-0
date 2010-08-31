@@ -5,6 +5,8 @@ SUMMARY="A handy utility for generating simple sound effects"
 HOMEPAGE="http://www.drpetter.se/project_sfxr.html"
 DOWNLOADS="http://www.drpetter.se/files/${PNV}.tar.gz"
 
+LICENCES="MIT"
+
 SLOT="0"
 
 DEPENDENCIES="
