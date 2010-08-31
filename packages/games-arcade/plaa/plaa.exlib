@@ -4,7 +4,7 @@
 require cmake
 
 SUMMARY="Two-dimensional space ship battle game"
-HOMEPAGE="about:blank"
+HOMEPAGE="http://gitorious.org/plaa"
 LICENCES="GPL-3"
 SLOT="0"
 
