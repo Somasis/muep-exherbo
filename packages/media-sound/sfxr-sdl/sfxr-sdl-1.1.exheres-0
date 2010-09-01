@@ -10,6 +10,8 @@ LICENCES="MIT"
 SLOT="0"
 
 DEPENDENCIES="
+    build:
+        dev-util/desktop-file-utils
     build+run:
         media-libs/SDL
         x11-libs/gtk+:2
