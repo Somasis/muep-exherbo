@@ -5,5 +5,5 @@ SCM_REPOSITORY="git://gitorious.org/plaa/plaa.git"
 
 require plaa scm-git
 
-PLATFORMS="~amd64 ~x86"
+PLATFORMS="~x86"
 

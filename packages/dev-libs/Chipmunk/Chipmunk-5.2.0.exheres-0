@@ -4,5 +4,5 @@
 
 require Chipmunk
 
-PLATFORMS="~amd64 ~x86"
+PLATFORMS="~x86"
 
