@@ -11,3 +11,10 @@ SLOT="0"
 
 PLATFORMS="~x86"
 
+DEPENDENCIES="
+    build:
+        sys-kernel/linux-headers
+    build+run:
+        sys-apps/util-linux-ng
+
+"
