@@ -11,7 +11,7 @@ SLOT="0"
 DEPENDENCIES="
     build+run:
         dev-libs/Chipmunk[>=5.0.0]
-        media-libs/SDL
+        media-libs/SDL[>=1.2][X]
         x11-dri/mesa
 "
 
