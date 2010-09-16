@@ -1,0 +1,19 @@
+# Copyright 2010 Joonas Sarajärvi <muepsj@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+require multilib
+
+SUMMARY="firmware loader for Qualcomm Gobi USB chipsets"
+HOMEPAGE="http://www.codon.org.uk/~mjg59/gobi_loader/"
+DOWNLOADS="http://www.codon.org.uk/~mjg59/gobi_loader/download/${PNV}.tar.gz"
+
+LICENCES="GPL-2"
+
+SLOT="0"
+
+# The install target in the Makefile is almost useless,
+# but fortunately not much needs to be done.
+src_install() {
+    install -D gobi_loader ${IMAGE}/$(get_libdir)/udev/gobi_loader
+    install -D 60-gobi.rules ${IMAGE}/$(get_libdir)/udev/rules.d/60-gobi.rules
+}

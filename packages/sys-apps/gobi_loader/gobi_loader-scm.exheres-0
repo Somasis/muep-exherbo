@@ -1,0 +1,8 @@
+# Copyright 2010 Joonas Sarajärvi <muepsj@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+SCM_REPOSITORY="git://cavan.codon.org.uk/gobi_loader.git"
+
+require gobi_loader scm-git
+
+PLATFORMS="~amd64"
