@@ -22,8 +22,21 @@ DEPENDENCIES="
         )
 "
 
+CMAKE_SRC_CONFIGURE_PARAMS="-DBUILD_SHARED:BOOL=TRUE -DINSTALL_STATIC:BOOL=FALSE"
+
 CMAKE_SRC_CONFIGURE_OPTIONS=(
     'demos BUILD_DEMOS'
     'demos INSTALL_DEMOS'
 )
+
+# TODO: get the demos built against
+# the shared lib
+src_install() {
+    cmake_src_install
+
+    # The demos are built against the shared lib which
+    # is unfortunate. The buildsys also seems to insist
+    # on installing it. Override this with rm.
+    edo rm ${IMAGE}/usr/lib/libchipmunk.a
+}
 
