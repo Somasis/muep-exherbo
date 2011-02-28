@@ -37,6 +37,6 @@ src_install() {
     # The demos are built against the shared lib which
     # is unfortunate. The buildsys also seems to insist
     # on installing it. Override this with rm.
-    edo rm ${IMAGE}/usr/lib/libchipmunk.a
+    edo rm "${IMAGE}"/usr/lib/libchipmunk.a
 }
 

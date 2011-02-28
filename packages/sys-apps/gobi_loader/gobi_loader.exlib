@@ -14,7 +14,7 @@ SLOT="0"
 # The install target in the Makefile is almost useless,
 # but fortunately not much needs to be done.
 src_install() {
-    edo install -D gobi_loader ${IMAGE}/$(get_libdir)/udev/gobi_loader
-    edo install -D 60-gobi.rules ${IMAGE}/$(get_libdir)/udev/rules.d/60-gobi.rules
+    edo install -D gobi_loader "${IMAGE}"/$(get_libdir)/udev/gobi_loader
+    edo install -D 60-gobi.rules "${IMAGE}"/$(get_libdir)/udev/rules.d/60-gobi.rules
 }
 
