@@ -1,0 +1,35 @@
+# Copyright 2012 Joonas Sarajärvi <muep@iki.fi>
+# Distributed under the terms of GNU General Public License v2
+
+require sourceforge [ project=ogl-math suffix=zip ]
+
+SUMMARY="header only C++ mathematics library for graphics software"
+HOMEPAGE="http://glm.g-truc.net/"
+LICENCES="MIT"
+SLOT="0"
+
+PLATFORMS="~x86"
+
+MYOPTIONS="
+    doc [[ description = [ install reference documentation ] ]]
+"
+
+src_unpack() {
+    mkdir -pv ${WORK}
+    cd ${WORK}
+    unpack ${PNV}.zip
+}
+
+src_install() {
+    edo mkdir -pv "${IMAGE}"/usr/include
+    edo cp -r "${WORK}"/glm "${IMAGE}"/usr/include/glm
+
+    if option doc ; then
+        # TODO: Automate the version part.
+        insinto /usr/share/doc/${PNVR}
+        doins doc/${PN}-0.9.3.pdf
+        insinto /usr/share/doc/${PNVR}/html
+        doins doc/api-0.9.3/*
+    fi
+}
+
