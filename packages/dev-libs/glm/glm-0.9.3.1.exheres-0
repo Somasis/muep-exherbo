@@ -1,9 +1,9 @@
 # Copyright 2012 Joonas Sarajärvi <muep@iki.fi>
 # Distributed under the terms of GNU General Public License v2
 
-require sourceforge [ project=ogl-math suffix=zip ]
+require cmake sourceforge [ project=ogl-math suffix=zip ]
 
-SUMMARY="header only C++ mathematics library for graphics software"
+SUMMARY="header-only C++ mathematics library"
 HOMEPAGE="http://glm.g-truc.net/"
 LICENCES="MIT"
 SLOT="0"
@@ -14,10 +14,32 @@ MYOPTIONS="
     doc [[ description = [ install reference documentation ] ]]
 "
 
+CMAKE_SRC_CONFIGURE_PARAMS=(
+    '-DGLM_TEST_MODE:BOOL=TRUE'
+)
+
 src_unpack() {
     mkdir -pv ${WORK}
     cd ${WORK}
     unpack ${PNV}.zip
+}
+
+src_configure() {
+    if expecting_tests ; then
+        cmake_src_configure
+    fi
+}
+
+src_compile() {
+    if expecting_tests ; then
+        cmake_src_compile
+    fi
+}
+
+src_test() {
+    if expecting_tests ; then
+        cmake_src_test
+    fi
 }
 
 src_install() {
