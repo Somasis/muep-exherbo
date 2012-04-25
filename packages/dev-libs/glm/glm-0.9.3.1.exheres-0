@@ -8,7 +8,7 @@ HOMEPAGE="http://glm.g-truc.net/"
 LICENCES="MIT"
 SLOT="0"
 
-PLATFORMS="~x86"
+PLATFORMS="~x86 ~amd64"
 
 MYOPTIONS="
     doc [[ description = [ install reference documentation ] ]]
