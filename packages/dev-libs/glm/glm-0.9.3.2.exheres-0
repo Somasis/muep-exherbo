@@ -18,6 +18,9 @@ CMAKE_SRC_CONFIGURE_PARAMS=(
     '-DGLM_TEST_MODE:BOOL=TRUE'
 )
 
+# Use this in future releases in case their source archive has
+# no common subdirectory for all the contents.
+#
 # src_unpack() {
 #     mkdir -pv ${WORK}
 #     cd ${WORK}
