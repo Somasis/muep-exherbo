@@ -18,11 +18,11 @@ CMAKE_SRC_CONFIGURE_PARAMS=(
     '-DGLM_TEST_MODE:BOOL=TRUE'
 )
 
-src_unpack() {
-    mkdir -pv ${WORK}
-    cd ${WORK}
-    unpack ${PNV}.zip
-}
+# src_unpack() {
+#     mkdir -pv ${WORK}
+#     cd ${WORK}
+#     unpack ${PNV}.zip
+# }
 
 src_configure() {
     if expecting_tests ; then
