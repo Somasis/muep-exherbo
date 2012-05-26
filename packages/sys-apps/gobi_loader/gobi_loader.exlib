@@ -1,6 +1,8 @@
 # Copyright 2010 Joonas Sarajärvi <muepsj@gmail.com>
 # Distributed under the terms of the GNU General Public License v2
 
+require udev-rules
+
 SUMMARY="firmware loader for Qualcomm Gobi USB chipsets"
 HOMEPAGE="http://www.codon.org.uk/~mjg59/gobi_loader/"
 DOWNLOADS="http://www.codon.org.uk/~mjg59/gobi_loader/download/${PNV}.tar.gz"
@@ -13,6 +15,6 @@ SLOT="0"
 # but fortunately not much needs to be done.
 src_install() {
     edo install -D gobi_loader "${IMAGE}"/${LIBDIR}/udev/gobi_loader
-    edo install -D 60-gobi.rules "${IMAGE}"/${LIBDIR}/udev/rules.d/60-gobi.rules
+    edo install -D 60-gobi.rules "${IMAGE}"/"${UDEVRULESDIR}"/60-gobi.rules
 }
 
