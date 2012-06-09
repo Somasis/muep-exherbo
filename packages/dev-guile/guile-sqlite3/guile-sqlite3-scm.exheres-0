@@ -1,0 +1,19 @@
+# Copyright 2012 Joonas Sarajärvi <muep@iki.fi>
+# Distributed under the terms of the GNU General Public License v2
+
+SCM_REPOSITORY="git://gitorious.org/guile-sqlite3/guile-sqlite3.git"
+
+PLATFORMS="~x86"
+
+require scm-git autotools [ supported_autoconf=[ 2.5 ] supported_automake=[ 1.12 ] ]
+
+SUMMARY="sqlite3 binding for Guile"
+LICENCES="( LGPL-3 )"
+SLOT="0"
+
+DEPENDENCIES="
+    build+run:
+        dev-db/sqlite:3
+        dev-lang/guile[>=2.0]
+"
+
