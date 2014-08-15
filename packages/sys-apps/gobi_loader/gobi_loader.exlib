@@ -3,6 +3,8 @@
 
 require udev-rules
 
+export_exlib_phases src_install
+
 SUMMARY="firmware loader for Qualcomm Gobi USB chipsets"
 HOMEPAGE="http://www.codon.org.uk/~mjg59/gobi_loader/"
 DOWNLOADS="http://www.codon.org.uk/~mjg59/gobi_loader/download/${PNV}.tar.gz"
@@ -13,7 +15,7 @@ SLOT="0"
 
 # The install target in the Makefile is almost useless,
 # but fortunately not much needs to be done.
-src_install() {
+gobi_loader_src_install() {
     edo install -D gobi_loader "${IMAGE}"/${LIBDIR}/udev/gobi_loader
     edo install -D 60-gobi.rules "${IMAGE}"/"${UDEVRULESDIR}"/60-gobi.rules
 }

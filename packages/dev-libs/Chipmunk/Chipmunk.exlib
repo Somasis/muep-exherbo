@@ -3,6 +3,8 @@
 
 require cmake
 
+export_exlib_phases src_install
+
 SUMMARY="Two-dimensional rigid body physics engine"
 HOMEPAGE="http://code.google.com/p/chipmunk-physics/"
 DOWNLOADS="http://files.slembcke.net/chipmunk/release/Chipmunk-5.x/${PNV}.tgz"
@@ -31,7 +33,7 @@ CMAKE_SRC_CONFIGURE_OPTIONS=(
 
 # TODO: get the demos built against
 # the shared lib
-src_install() {
+Chipmunk_src_install() {
     cmake_src_install
 
     # The demos are built against the shared lib which
