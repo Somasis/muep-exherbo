@@ -3,7 +3,7 @@
 
 SCM_REPOSITORY="git://gitorious.org/guile-sqlite3/guile-sqlite3.git"
 
-PLATFORMS="~x86"
+PLATFORMS="~amd64 ~x86"
 
 require scm-git autotools [ supported_autoconf=[ 2.5 ] supported_automake=[ 1.12 ] ]
 
